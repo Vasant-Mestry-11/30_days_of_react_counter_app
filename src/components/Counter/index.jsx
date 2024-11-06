@@ -1,12 +1,19 @@
 import { useState } from "react";
+import "./counter.css";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
 
   return (
     <div className="card">
-      <h1 data-testid="counter">Count: {count}</h1>
-      <button data-testid="incrementButton" onClick={() => setCount(count + 1)}>
+      <h1 data-testid="counter" className="card__title">
+        {count}
+      </h1>
+      <button
+        data-testid="incrementButton"
+        onClick={() => setCount(count + 1)}
+        className="card__action"
+      >
         Increment
       </button>
     </div>
