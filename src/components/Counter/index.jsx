@@ -1,8 +1,8 @@
-import { useState } from "react";
 import "./counter.css";
+import useCounter from "../../hooks/useCounter";
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  const { count, incrementByCount } = useCounter(0, 3);
 
   return (
     <div className="card">
@@ -12,9 +12,7 @@ const Counter = () => {
       <button
         data-testid="incrementButton"
         onClick={() => {
-          setCount((prevCount) => prevCount + 1);
-          setCount((prevCount) => prevCount + 1);
-          setCount((prevCount) => prevCount + 1);
+          incrementByCount(3);
         }}
         className="card__action"
       >
