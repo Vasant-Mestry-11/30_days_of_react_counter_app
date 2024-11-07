@@ -11,7 +11,11 @@ const Counter = () => {
       </h1>
       <button
         data-testid="incrementButton"
-        onClick={() => setCount(count + 1)}
+        onClick={() => {
+          setCount((prevCount) => prevCount + 1);
+          setCount((prevCount) => prevCount + 1);
+          setCount((prevCount) => prevCount + 1);
+        }}
         className="card__action"
       >
         Increment
