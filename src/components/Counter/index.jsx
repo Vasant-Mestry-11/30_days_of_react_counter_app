@@ -1,8 +1,10 @@
 import "./counter.css";
 import useCounter from "../../hooks/useCounter";
 
+const INCREMENT_COUNT = 3;
+
 const Counter = () => {
-  const { count, incrementByCount } = useCounter(0, 3);
+  const { count, incrementByCount } = useCounter(0, INCREMENT_COUNT);
 
   return (
     <div className="card">
@@ -16,7 +18,7 @@ const Counter = () => {
         }}
         className="card__action"
       >
-        Increment
+        Increment {INCREMENT_COUNT} times
       </button>
     </div>
   );
